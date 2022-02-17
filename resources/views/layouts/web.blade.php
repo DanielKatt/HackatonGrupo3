@@ -17,7 +17,7 @@
     <title>Document</title>
 </head>
 <header>
-<x-header />
+{{-- <x-header /> --}}
 </header>
 <body>
     <main>
