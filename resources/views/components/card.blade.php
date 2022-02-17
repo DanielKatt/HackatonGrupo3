@@ -12,48 +12,48 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 
-        <style>
+            <style>
 
-        @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
-
-
-            /*CARDS*/
-            .card{
-                margin: 5vw;
-            }
-
-            .cardTitleContainer{
-                background-color: #119DA4;
-                padding: 2vw 1vw 1vw 1vw; 
-                color: #fff;
-                font-family: 'Permanent Marker';
-                text-align: center;
-            }
-
-            .card-title{
-                font-size: 3vw;
-            }
-
-            .card-body{
-                padding: 0;
-                text-align: center;
-                margin: 2vw 1.5vw 2vw 1.5vw;
-                font-family: Montserrat;
-                font-size: 2vw;
-            }
-
-            #cardButton{
-                background-color: #119DA4;
-                border-color: #119DA4;
-            }
-
-            #cardButton:hover{
-                background-color: #13505B;
-            }
+            @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 
-        </style>
+                /*CARDS*/
+                .card{
+                    margin: 5vw;
+                }
+
+                .cardTitleContainer{
+                    background-color: #119DA4;
+                    padding: 2vw 1vw 1vw 1vw; 
+                    color: #fff;
+                    font-family: 'Permanent Marker';
+                    text-align: center;
+                }
+
+                .card-title{
+                    font-size: 3vw;
+                }
+
+                .card-body{
+                    padding: 0;
+                    text-align: center;
+                    margin: 2vw 1.5vw 2vw 1.5vw;
+                    font-family: Montserrat;
+                    font-size: 2vw;
+                }
+
+                #cardButton{
+                    background-color: #119DA4;
+                    border-color: #119DA4;
+                }
+
+                #cardButton:hover{
+                    background-color: #13505B;
+                }
+
+
+            </style>
     </head>
     
     
@@ -64,7 +64,7 @@
 
 <div class="card" style="width: 18rem;">
 
-        <div class="cardTitleContainer"> 
+        <div class="cardTitleContainer" > 
         <h5 class="card-title">Card title</h5>
         </div>
 
@@ -78,7 +78,7 @@
         <a href="#" class="btn btn-primary" id="cardButton">Agregar a mis cursos</a>
 
     </div>
-    </div>
+</div>
 
 
 </html>

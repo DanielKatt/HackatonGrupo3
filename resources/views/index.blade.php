@@ -1,17 +1,17 @@
-@extends('layouts.app')
+@extends('layouts.web')
 <header>
-    <x-header />
+    <x-header /> 
 </header>
 <body>
     @section('content')
     <div>
-        <livewire:course-list />
+        
     </div>
     @endsection
-
+    <livewire:course-list />
     
 </body>
 
 <footer>
-    <x-footer />
+    
 </footer>
