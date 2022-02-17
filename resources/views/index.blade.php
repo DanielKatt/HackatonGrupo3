@@ -5,7 +5,7 @@
 <body>
     @section('content')
     <div>
-        
+        <livewire:course-list />
     </div>
     @endsection
 
