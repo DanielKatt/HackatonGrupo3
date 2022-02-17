@@ -74,7 +74,7 @@
                         </div>
                     </div>
                 </div>
-                {!! $courses->links() !!}
+                {{ $courses->links('pagination::Bootstrap-4') }}
             </div>
         </div>
     </div>

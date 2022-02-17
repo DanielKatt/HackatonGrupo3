@@ -8,8 +8,9 @@
         
     </div>
     @endsection
+ 
     <livewire:course-list />
-    
+    <x-card />
 </body>
 
 <footer>
