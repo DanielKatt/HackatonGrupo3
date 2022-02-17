@@ -47,12 +47,12 @@
 <nav class="navbar" style="background-color: #13505B;">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
-        <img class="logo" src="/Images/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            <img class="logo" src="/Images/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
         CodeMarket
-</a>
+        </a>
 
-        <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="¿Qué curso buscas?" aria-label="Buscar">
+        <form class="d-flex" action="{{ route('search') }}" method="GET">
+        <input class="form-control me-2" type="text" name="search" required placeholder="¿Qué curso buscas?" aria-label="Buscar">
         <button class="btn btn-outline-secondary" type="submit">Search</button>
         </form>
         

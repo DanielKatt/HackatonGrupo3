@@ -24,6 +24,7 @@ class CourseController extends Controller
             ->with('i', (request()->input('page', 1) - 1) * $courses->perPage());
     }
 
+    // CRUD: Create
     /**
      * Show the form for creating a new resource.
      *
@@ -35,6 +36,7 @@ class CourseController extends Controller
         return view('course.create', compact('course'));
     }
 
+    // CRUD: Store in Database
     /**
      * Store a newly created resource in storage.
      *
@@ -51,6 +53,7 @@ class CourseController extends Controller
             ->with('success', 'Course created successfully.');
     }
 
+    // CRUD: Display Courses
     /**
      * Display the specified resource.
      *
@@ -64,6 +67,7 @@ class CourseController extends Controller
         return view('course.show', compact('course'));
     }
 
+    // CRUD: Edit
     /**
      * Show the form for editing the specified resource.
      *
@@ -77,6 +81,7 @@ class CourseController extends Controller
         return view('course.edit', compact('course'));
     }
 
+    // CRUD: Update Course
     /**
      * Update the specified resource in storage.
      *
@@ -94,6 +99,7 @@ class CourseController extends Controller
             ->with('success', 'Course updated successfully');
     }
 
+    // CRUD: Delete Course
     /**
      * @param int $id
      * @return \Illuminate\Http\RedirectResponse
@@ -112,4 +118,18 @@ class CourseController extends Controller
         $this->middleware('auth');
     }
 
+    // Search Function
+    public function search(Request $request){
+        // Get the search value from the request
+        $search = $request->input('search');
+    
+        // Search in the title and body columns from the posts table
+        $courses = Course::query()
+            ->where('title', 'LIKE', "%{$search}%")
+            ->orWhere('body', 'LIKE', "%{$search}%")
+            ->get();
+    
+        // Return the search view with the results compacted
+        return view('search', compact('courses'));
+    }
 }
