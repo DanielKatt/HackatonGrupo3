@@ -51,8 +51,8 @@
         CodeMarket
 </a>
 
-        <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="¿Qué curso buscas?" aria-label="Buscar">
+        <form class="d-flex" type="get" action="{{ url('/search') }}">
+        <input class="form-control me-2" name="query" type="search" placeholder="¿Qué curso buscas?" aria-label="Buscar">
         <button class="btn btn-outline-secondary" type="submit">Search</button>
         </form>
         

@@ -24,6 +24,7 @@ class CourseController extends Controller
             ->with('i', (request()->input('page', 1) - 1) * $courses->perPage());
     }
 
+    // CRUD: Create
     /**
      * Show the form for creating a new resource.
      *
@@ -35,6 +36,7 @@ class CourseController extends Controller
         return view('course.create', compact('course'));
     }
 
+    // CRUD: Save new course in DB
     /**
      * Store a newly created resource in storage.
      *
@@ -51,6 +53,7 @@ class CourseController extends Controller
             ->with('success', 'Course created successfully.');
     }
 
+    // CRUD: Dosplay Courses
     /**
      * Display the specified resource.
      *
@@ -64,6 +67,7 @@ class CourseController extends Controller
         return view('course.show', compact('course'));
     }
 
+    // CRUD: Edit
     /**
      * Show the form for editing the specified resource.
      *
@@ -77,6 +81,7 @@ class CourseController extends Controller
         return view('course.edit', compact('course'));
     }
 
+    // CRUD: Update edited courses in DB
     /**
      * Update the specified resource in storage.
      *
@@ -94,6 +99,7 @@ class CourseController extends Controller
             ->with('success', 'Course updated successfully');
     }
 
+    // CRUD: Delete courses
     /**
      * @param int $id
      * @return \Illuminate\Http\RedirectResponse
@@ -112,4 +118,11 @@ class CourseController extends Controller
         $this->middleware('auth');
     }
 
+    // SEARCH Function
+    public function search() {
+        $search_text = $_GET['query'];
+        $courses = Course::where('title','LIKE', '%'.$search_text.'%')->with('category')->get();
+
+        return view('courses.search',compact('courses'));
+    }
 }
