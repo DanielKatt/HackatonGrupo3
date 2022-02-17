@@ -25,6 +25,7 @@
             <div class="container pt-4">
                 <!-- DEVELOPERS SOCIAL MEDIA -->
                 <section class="mb-4">
+                
                 <!-- DANIEL GUTIERREZ -->
                 <a
                     class="btn btn-link btn-floating btn-lg text-dark m-1"
@@ -55,24 +56,25 @@
                 <!-- HELEN DIDSBURY -->
                 <a
                     class="btn btn-link btn-floating btn-lg text-dark m-1"
-                    href="#!"
+                    href="https://github.com/CrypticiaN"
                     role="button"
                     data-mdb-ripple-color="dark"
-                    ><i class="fab fa-instagram"></i
+                    ><img class="devLogo" src="/Images/Icon1.png"></i
                 ></a>
             
                 <!-- VALENTINA -->
                 <a
                     class="btn btn-link btn-floating btn-lg text-dark m-1"
-                    href="#!"
+                    href="https://github.com/Valen-programming"
                     role="button"
                     data-mdb-ripple-color="dark"
-                    ><i class="fab fa-linkedin"></i
+                    ><img class="devLogo" src="/Images/Icon2.png"></i
                 ></a>
+                
                 <!-- CARLOS FERRO -->
                 <a
                     class="btn btn-link btn-floating btn-lg text-dark m-1"
-                    href="#!"
+                    href="https://github.com/CarlosPrentt"
                     role="button"
                     data-mdb-ripple-color="dark"
                     ><img class="devLogo" src="/Images/CarlosLogo.png"></i
