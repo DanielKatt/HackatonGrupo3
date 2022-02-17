@@ -43,6 +43,15 @@
                 font-size: 2vw;
             }
 
+            #cardButton{
+                background-color: #119DA4;
+                border-color: #119DA4;
+            }
+
+            #cardButton:hover{
+                background-color: #13505B;
+            }
+
 
         </style>
     </head>
@@ -60,13 +69,14 @@
         </div>
 
         <div class="card-body">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="..." class="card-img-top" alt="img">
         <p class="card-text">Categoría:  </p>
 
         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc accumsan ornare risus, id commodo nulla. Curabitur tellus ipsum, rutrum quis ligula ut, consectetur finibus libero.</p>
         <p class="card-text">Precio: $ </p>
 
-        <a href="#" class="btn btn-primary">Agregar a mis cursos</a>
+        <a href="#" class="btn btn-primary" id="cardButton">Agregar a mis cursos</a>
+
     </div>
     </div>
 
