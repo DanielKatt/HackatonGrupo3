@@ -41,4 +41,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function getAvatarAttribute(){
+        $email = md5($this->email);
+        return "https://i.pravatar.cc/150?u=/$email";
+        
+    }
 }

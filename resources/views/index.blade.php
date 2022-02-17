@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.web')
 <header>
-    <x-header />
+    <x-header /> 
 </header>
 <body>
     @section('content')
@@ -8,10 +8,11 @@
         
     </div>
     @endsection
-
-    
+ 
+    <livewire:course-list />
+    <x-card />
 </body>
 
 <footer>
-    <x-footer />
+    
 </footer>

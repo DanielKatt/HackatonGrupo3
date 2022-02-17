@@ -1,4 +1,8 @@
 
+
+
+
+
         <style>
 
         @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
@@ -46,13 +50,19 @@
 
 <nav class="navbar" style="background-color: #13505B;">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+
+        <a class="navbar-brand" href="/">
         <img class="logo" src="/Images/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
         CodeMarket
-</a>
+        </a>
 
+<<<<<<< HEAD
         <form class="d-flex" type="get" action="{{ url('/search') }}">
         <input class="form-control me-2" name="query" type="search" placeholder="¿Qué curso buscas?" aria-label="Buscar">
+=======
+        <form class="d-flex" action="{{ route('search') }}" method="GET">
+        <input class="form-control me-2" type="text" name="search" required placeholder="¿Qué curso buscas?" aria-label="Buscar">
+>>>>>>> main
         <button class="btn btn-outline-secondary" type="submit">Search</button>
         </form>
         
@@ -62,7 +72,23 @@
             @if (Route::has('login'))
                 <div class="login">
                     @auth
-{{--                         <a href="{{ url('/home') }}" class="">Home</a> --}}
+                    
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            {{ Auth::user()->name }}
+                        </a>
+
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item text-dark" href="{{ route('logout') }}"
+                               onclick="event.preventDefault();
+                                             document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                        </div>
+                   
                     @else
                         <a href="{{ route('login') }}" class="">Log in</a>
                         @if (Route::has('register'))
@@ -74,3 +100,5 @@
         </div>
     </div>
     </nav>
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
