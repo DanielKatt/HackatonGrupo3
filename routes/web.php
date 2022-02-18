@@ -13,6 +13,6 @@ Auth::routes();
 Route::resource('courses', App\Http\Controllers\CourseController::class);
 Route::get('course/{course:slug}', [PageController::class, 'course'])->name('course');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
+Route::get('home/search/', 'CourseController@search')->name('search');
 
 

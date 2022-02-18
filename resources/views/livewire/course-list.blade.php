@@ -1,4 +1,5 @@
 <div>
+    <h1 class="title">CURSOS DISPONIBLES</h1>
     <div class="container">
         <div class="row">
         @foreach($courses as $course)
@@ -36,7 +37,7 @@
             }
 
             .card{
-                margin: 0 auto;
+                margin: 8 auto;
                 -webkit-box-shadow: -2px 3px 15px 11px rgba(0,0,0,0.19); 
                 box-shadow: -2px 3px 15px 11px rgba(0,0,0,0.19);
                 transition: all 500ms ease;
@@ -51,7 +52,7 @@
                 width: 100%;
                 display: flex;
                 max-width: 1000px;
-                padding: 10px 0px 300px 0px;
+                padding: 8px 0px 8px 0px;
             }
             .row{
                 width: 100%;
