@@ -11,7 +11,8 @@
             <a href="#" class="btn btn-primary" id="cardButton">Agregar a mis cursos</a>
             <p class="text-gray-500 text-sm mt-5">{{ $course->user->name }}</p>
             {{-- <img src="{{ $course->user->avatar }}" class="h-10 w-10 rounded-full mr-2" /> --}}
-            <p class="text-gray-300 text-xs">{{ $course->created_at->diffForHumans() }}</p>       
+            <p class="text-gray-300 text-xs">{{ $course->created_at->diffForHumans() }}</p>   
+            <p>{{$course->user->email}}  </p> 
         </div>           
     </div>
     <hr>

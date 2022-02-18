@@ -72,6 +72,9 @@
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item text-dark" href="{{ route('courses.create') }}">
+                             {{ __('Añade tu Curso') }}
+                         </a>
                             <a class="dropdown-item text-dark" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
                                              document.getElementById('logout-form').submit();">
