@@ -10,3 +10,10 @@ Brinda la oportunidad de adquirir nuevos conocimientos y habilidades, así como 
 
 
 Toma el ctrl de tu vida!
+
+#Instalation
+
+composer require laravel/ui
+composer require livewire/livewire
+npm install && npm run dev
+npm run watch
