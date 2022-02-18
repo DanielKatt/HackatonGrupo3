@@ -46,7 +46,7 @@ class Course extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
-    public function user()
+    public function users()
     {
         return $this->hasOne('App\Models\User', 'id', 'user_id');
     }

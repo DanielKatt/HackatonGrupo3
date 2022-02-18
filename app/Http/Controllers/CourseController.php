@@ -119,17 +119,18 @@ class CourseController extends Controller
     }
 
     // Search Function
-    public function search(Request $request){
+    public function search(){
+
         // Get the search value from the request
-        $search = $request->input('search');
-    
+        $search_text = $_GET['query'];
+        
         // Search in the title and body columns from the posts table
-        $courses = Course::query()
-            ->where('title', 'LIKE', "%{$search}%")
-            ->orWhere('body', 'LIKE', "%{$search}%")
-            ->get();
-    
-        // Return the search view with the results compacted
-        return view('search', compact('courses'));
+        $courses = Course::where('name','LIKE', '%'.$search_text.'%')
+        ->orWhere('description', 'LIKE', '%'.$search_text.'%') 
+        ->with('')->get();
+
+        return view('course.search',compact('courses'));
     }
 }
+
+?>

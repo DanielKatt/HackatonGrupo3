@@ -52,19 +52,18 @@
     <div class="container-fluid">
 
         <a class="navbar-brand" href="/">
-        <img class="logo" src="/Images/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            <img class="logo" src="/Images/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
         CodeMarket
         </a>
 
-<<<<<<< HEAD
+
+{{--  SEARCH FORM --}} 
+
         <form class="d-flex" type="get" action="{{ url('/search') }}">
-        <input class="form-control me-2" name="query" type="search" placeholder="¿Qué curso buscas?" aria-label="Buscar">
-=======
-        <form class="d-flex" action="{{ route('search') }}" method="GET">
-        <input class="form-control me-2" type="text" name="search" required placeholder="¿Qué curso buscas?" aria-label="Buscar">
->>>>>>> main
-        <button class="btn btn-outline-secondary" type="submit">Search</button>
+            <input class="form-control me-2" name="query" type="search"  required placeholder="¿Qué curso buscas?" aria-label="Buscar">
+            <button class="btn btn-outline-secondary" type="submit">Search</button>
         </form>
+
         
 {{-- LOG IN AND REGISTER --}}
 
